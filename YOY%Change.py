@@ -1,6 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 import yfinance as yf
+
 def fetch_stock_data(ticker, start_year, end_year):
     """
     Fetches stock data and the full name of the stock from the start of the start_year to the end of the end_year.
@@ -14,6 +15,7 @@ def fetch_stock_data(ticker, start_year, end_year):
     except KeyError:
         full_name = ticker  # Fallback to ticker if full name not found
     return data, full_name
+    
 def calculate_total_percentage_change(data):
     """
     Calculates the total percentage change from the first to the last data point
@@ -24,6 +26,7 @@ def calculate_total_percentage_change(data):
         return (end_price - start_price) / start_price * 100
     else:
         return None
+        
 def plot_histogram(years, changes, ticker, total_change, full_name):
     """
     Plots a histogram of the annual percentage changes using Seaborn with text labels above the bars.
@@ -45,6 +48,7 @@ def plot_histogram(years, changes, ticker, total_change, full_name):
     plt.xlabel('Year')
     plt.ylabel('Percentage Change')
     plt.show()
+    
 def main():
     ticker = input("Enter the stock ticker symbol: ")
     start_year = int(input("Enter the start year for comparison: "))
