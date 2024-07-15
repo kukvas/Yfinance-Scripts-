@@ -1,7 +1,7 @@
-Ensure you have the yfinance api 
+Ensure you have the yfinance api -- 
 pip install yfinance
 
 and
 
-The seaborn library
+The seaborn library -- 
 pip install seaborn 
